@@ -1,0 +1,355 @@
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --rojo: #cc0000;
+    --naranja: #ff7b00;
+    --gris: #f2f2f2;
+    --blanco: #ffffff;
+    --oscuro: #333333;
+}
+
+/* =========================
+   RESET BÁSICO
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--oscuro);
+}
+
+/* =========================
+   HEADER / TOPBAR
+========================= */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    padding: 12px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 45px;
+    height: auto;
+}
+
+.search input {
+    width: 320px;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+.icons span {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+    background-color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--oscuro);
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--rojo);
+}
+
+/* =========================
+   CATEGORÍAS
+========================= */
+.categorias {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    padding: 15px;
+}
+
+.categoria {
+    background-color: #eeeeee;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.categoria:hover {
+    background-color: var(--naranja);
+    color: var(--blanco);
+}
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+.layout {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+    width: 230px;
+    background-color: var(--blanco);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.sidebar h3 {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 8px 0;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--oscuro);
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}
+
+/* =========================
+   CONTENIDO
+========================= */
+.content {
+    flex: 1;
+}
+
+.content h2 {
+    margin-bottom: 25px;
+    color: var(--rojo);
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid var(--naranja);
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* =========================
+   GRID DE PRODUCTOS
+========================= */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* =========================
+   CARD DE PRODUCTO
+========================= */
+.card {
+    background-color: var(--blanco);
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+.card h4 {
+    margin: 10px 0;
+}
+
+.price {
+    color: var(--naranja);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card button {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background-color: #e56700;
+}
+
+/* =========================
+   PROMOCIONES
+========================= */
+.promo {
+    background-color: #ffefe0;
+    padding: 30px;
+    text-align: center;
+}
+
+.promo h2 {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   CARRITO DE COMPRAS
+========================= */
+.carrito {
+    background-color: #ffffff;
+    margin: 30px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.carrito h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+/* Lista de productos */
+#listaCarrito {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+#listaCarrito li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 15px;
+}
+
+/* Total */
+.carrito p {
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Botones del carrito */
+.carrito button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ff7b00;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.carrito button:hover {
+    background-color: #e56700;
+}
+
+/* Botón vaciar carrito */
+.carrito button:last-child {
+    background-color: #cc0000;
+}
+
+.carrito button:last-child:hover {
+    background-color: #a80000;
+}
+
+/* =========================
+   RESPONSIVE CARRITO
+========================= */
+@media (max-width: 600px) {
+    .carrito {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .carrito h2 {
+        font-size: 20px;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background-color: var(--oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .search input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .categorias {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}

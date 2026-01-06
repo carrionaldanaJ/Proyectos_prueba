@@ -1,0 +1,125 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* =========================
+   HEADER SIMPLE
+========================= */
+.topbar {
+    background-color: #ff7b00;
+    padding: 15px;
+    text-align: center;
+}
+
+.topbar span {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =========================
+   TÍTULO DE LA VENTANA
+========================= */
+.titulo-pagina {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.titulo-pagina h1 {
+    margin: 0;
+    font-size: clamp(24px, 4vw, 34px);
+    color: #333333;
+}
+
+.titulo-pagina p {
+    margin-top: 8px;
+    font-size: clamp(14px, 2vw, 16px);
+    color: #666666;
+}
+
+/* =========================
+   GRID DE CATEGORÍAS
+========================= */
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* =========================
+   TARJETA DE CATEGORÍA
+========================= */
+.categoria-card {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 14px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* EFECTO ERGONÓMICO */
+.categoria-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================
+   CAPA OSCURA PARA TEXTO
+========================= */
+.categoria-card .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.25)
+    );
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+}
+
+/* TEXTO DE CATEGORÍA */
+.categoria-card h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(18px, 2.5vw, 24px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE EXTRA
+========================= */
+@media (max-width: 480px) {
+    .categorias-grid {
+        padding: 15px;
+        gap: 15px;
+    }
+}

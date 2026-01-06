@@ -1,0 +1,185 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+    background-color: #ff7b00;
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* =========================
+   TÍTULO DE LA PÁGINA
+========================= */
+.titulo {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.titulo p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+.pedidos {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto 40px;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* =========================
+   SECCIÓN: RESUMEN DEL PEDIDO
+========================= */
+.resumen-pedido {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resumen-pedido h3 {
+    border-bottom: 2px solid #ff7b00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #ff7b00;
+}
+
+#listaPedido {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#listaPedido li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    font-size: 18px;
+    text-align: right;
+    margin-top: 20px;
+    border-top: 2px solid #eee;
+    padding-top: 15px;
+}
+
+.total span {
+    color: #cc0000;
+    font-size: 22px;
+}
+
+/* =========================
+   SECCIÓN: FORMULARIO
+========================= */
+.form-pedido {
+    flex: 1;
+    min-width: 300px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-pedido h3 {
+    border-bottom: 2px solid #ff7b00;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #ff7b00;
+}
+
+.form-pedido label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-pedido input,
+.form-pedido select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-pedido input:focus,
+.form-pedido select:focus {
+    border-color: #ff7b00;
+    outline: none;
+}
+
+.form-pedido button {
+    width: 100%;
+    background-color: #ff7b00;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.form-pedido button:hover {
+    background-color: #e56700;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+    background-color: #333;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+    .pedidos {
+        flex-direction: column;
+    }
+}

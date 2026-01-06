@@ -1,0 +1,144 @@
+/* =========================
+   OFERTAS FILTRO CSS
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5e6;
+    /* Un tono crema suave para ofertas */
+}
+
+.header {
+    background-color: #ff4500;
+    /* Naranja rojizo para destacar ofertas */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Frase Motivacional */
+.motivation {
+    background-color: #ffe4c4;
+    color: #cc3700;
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #ff4500;
+    margin-bottom: 20px;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    border: 2px solid #ff4500;
+    /* Borde destacado */
+    position: relative;
+}
+
+.producto::before {
+    content: "OFERTA";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff4500;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Estilos para productos GRATIS */
+.producto.gratis {
+    border-color: #28a745;
+    /* Verde */
+}
+
+.producto.gratis::before {
+    content: "GRATIS";
+    background-color: #28a745;
+}
+
+.producto.gratis p:not(.precio-antiguo) {
+    color: #28a745;
+}
+
+.producto.gratis button {
+    background-color: #28a745;
+}
+
+.producto.gratis button:hover {
+    background-color: #1e7e34;
+}
+
+
+.producto:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.producto h3 {
+    color: #333;
+    font-size: 18px;
+}
+
+.precio-antiguo {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.producto p:not(.precio-antiguo) {
+    color: #ff4500;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.producto button {
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.producto button:hover {
+    background-color: #cc3700;
+}
+
+.carrito-link {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carrito-link a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
